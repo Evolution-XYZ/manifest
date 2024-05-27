@@ -59,9 +59,10 @@ for apex in com.android.adbd com.android.adservices com.android.adservices.api c
 done
 ```
 
-- Move your keys to the vendor repo
+- Move your certs and keys to the vendor repo
 ```
-mv ~/.android-certs/* vendor/evolution-priv/keys
+mv ~/.android-certs/*.pem vendor/evolution-priv/keys
+mv ~/.android-certs/*.pk8 vendor/evolution-priv/keys
 ```
 
 - Open and modify the `BUILD` file located in the root of the project to match the following contents
