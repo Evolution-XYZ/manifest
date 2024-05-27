@@ -37,6 +37,16 @@ for cert in bluetooth cyngn-app media networkstack platform releasekey sdk_sandb
 done
 ```
 
+- Copy make_key file to ~/.android-certs
+```
+cp ./development/tools/make_key ~/.android-certs/
+```
+
+- Edit make_key to use SHA256_RSA4096
+```
+sed -i 's|2048|4096|g' ~/.android-certs/make_key
+```
+
 Note:
 * DO NOT set a password for the keys. If you do, you won't be able to use them for building!
 
